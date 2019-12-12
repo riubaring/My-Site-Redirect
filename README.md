@@ -5,4 +5,4 @@ Here is a sample on how to redirect users from an "Old" site to a new one.
 * Change ```[URL to My Old Site]``` to the old site hyperlink
 * Change ```[URL to My New Site]``` to the new site hyperlink
 
-![(https://github.com/riubaring/My-Site-Redirect/blob/master/my-site-redirect.png)]
+![My Site Redirect](https://github.com/riubaring/My-Site-Redirect/blob/master/my-site-redirect.png)

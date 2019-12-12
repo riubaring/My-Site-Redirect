@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Redirecting - My Site</TITLE>
+<link rel="shortcut icon" href="images/iconKP16.png" type="image/vnd.microsoft.icon" id="favicon">
+<style>
+.rb-redirect-contents {
+	color: #fff;
+	font-size: 17px;
+	font-family: "Segoe UI Web (West European)",Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+.rb-redirect-button {
+	text-decoration: none;
+	height: 32px;
+	min-width: 80px;
+	background-color: #0078b3;
+	border-color: #0078b3;
+	color: #ffffff;
+	outline: transparent;
+	position: relative;
+	font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	font-weight: 400;
+	border-width: 0;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0 16px;
+}
+.rb-redirect-button span {
+	font-weight: 600;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 4px;
+    display: inline-block;
+}
+</style>
+<script language="JavaScript">
+	// total seconds to wait
+	var seconds = 15;
+	
+	function countDown() {
+		seconds = seconds - 1;
+		
+		if(seconds < 0) {
+			window.location.href = "URL to My New Site";
+			
+		} else {
+			document.getElementById("rb-counter-second").innerHTML = seconds;
+			window.setTimeout("countDown()", 1000);
+		}
+	}
+	
+	// fire it update
+	window.onload = countDown;
+	
+</script>
+
+</HEAD>
+<BODY>
+<div style="background: #00557f; width: 900px; height: 375px; margin: 60 auto;">
+	<div class="rb-redirect-contents" style="float: left; margin: 36px 24px;">
+		<span><img src="KP-signature-grey.png" width="20%"></apan>
+		<p><b>This site has moved to [URL to My New Site]</b></p>
+		<p>You will be redirected to the new site in <span id="rb-counter-second">15</span> seconds </p>
+		<p>Requested URL/Page: [URL to My Old Site]<br>
+		   Redirected URL/Page: [URL to My New Site]</p>
+		<p>Please update your bookmarks accordingly.</p>
+		
+		<a href="[URL to My New Site]" class="rb-redirect-button">
+			<span>Redirect Now!</span>
+		</a>
+	</div>
+</div>
+</BODY>
+</HTML>
